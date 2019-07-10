@@ -1,0 +1,319 @@
+{
+    "depth": 6,
+    "feature": 19,
+    "threshold": 132,
+    "isLeafNode": false,
+    "numOfNodes": 100,
+    "leafReslts": {},
+    "left_node": {
+        "depth": 5,
+        "feature": 167,
+        "threshold": 59,
+        "isLeafNode": false,
+        "numOfNodes": 68,
+        "leafReslts": {},
+        "left_node": {
+            "depth": 4,
+            "feature": 52,
+            "threshold": 87,
+            "isLeafNode": false,
+            "numOfNodes": 24,
+            "leafReslts": {},
+            "left_node": {
+                "depth": 3,
+                "feature": 17,
+                "threshold": 57,
+                "isLeafNode": false,
+                "numOfNodes": 10,
+                "leafReslts": {},
+                "left_node": {
+                    "depth": 2,
+                    "feature": 6,
+                    "threshold": 100,
+                    "isLeafNode": false,
+                    "numOfNodes": 5,
+                    "leafReslts": {},
+                    "left_node": {
+                        "depth": 1,
+                        "feature": -1,
+                        "threshold": null,
+                        "isLeafNode": true,
+                        "numOfNodes": 3,
+                        "leafReslts": {
+                            "270": 1.0
+                        }
+                    },
+                    "right_node": {
+                        "depth": 1,
+                        "feature": -1,
+                        "threshold": null,
+                        "isLeafNode": true,
+                        "numOfNodes": 2,
+                        "leafReslts": {
+                            "0": 0.5,
+                            "180": 0.5
+                        }
+                    }
+                },
+                "right_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 5,
+                    "leafReslts": {
+                        "0": 1.0
+                    }
+                }
+            },
+            "right_node": {
+                "depth": 3,
+                "feature": 17,
+                "threshold": 118,
+                "isLeafNode": false,
+                "numOfNodes": 14,
+                "leafReslts": {},
+                "left_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 13,
+                    "leafReslts": {
+                        "270": 1.0
+                    }
+                },
+                "right_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 1,
+                    "leafReslts": {
+                        "90": 1.0
+                    }
+                }
+            }
+        },
+        "right_node": {
+            "depth": 4,
+            "feature": 182,
+            "threshold": 130,
+            "isLeafNode": false,
+            "numOfNodes": 44,
+            "leafReslts": {},
+            "left_node": {
+                "depth": 3,
+                "feature": 124,
+                "threshold": 138,
+                "isLeafNode": false,
+                "numOfNodes": 25,
+                "leafReslts": {},
+                "left_node": {
+                    "depth": 2,
+                    "feature": 185,
+                    "threshold": 84,
+                    "isLeafNode": false,
+                    "numOfNodes": 18,
+                    "leafReslts": {},
+                    "left_node": {
+                        "depth": 1,
+                        "feature": 63,
+                        "threshold": 141,
+                        "isLeafNode": false,
+                        "numOfNodes": 10,
+                        "leafReslts": {},
+                        "left_node": {
+                            "depth": 0,
+                            "feature": -1,
+                            "threshold": null,
+                            "isLeafNode": true,
+                            "numOfNodes": 4,
+                            "leafReslts": {
+                                "180": 0.25,
+                                "90": 0.75
+                            }
+                        },
+                        "right_node": {
+                            "depth": 0,
+                            "feature": -1,
+                            "threshold": null,
+                            "isLeafNode": true,
+                            "numOfNodes": 6,
+                            "leafReslts": {
+                                "180": 1.0
+                            }
+                        }
+                    },
+                    "right_node": {
+                        "depth": 1,
+                        "feature": 18,
+                        "threshold": 46,
+                        "isLeafNode": false,
+                        "numOfNodes": 8,
+                        "leafReslts": {},
+                        "left_node": {
+                            "depth": 0,
+                            "feature": -1,
+                            "threshold": null,
+                            "isLeafNode": true,
+                            "numOfNodes": 2,
+                            "leafReslts": {
+                                "270": 1.0
+                            }
+                        },
+                        "right_node": {
+                            "depth": 0,
+                            "feature": -1,
+                            "threshold": null,
+                            "isLeafNode": true,
+                            "numOfNodes": 6,
+                            "leafReslts": {
+                                "90": 1.0
+                            }
+                        }
+                    }
+                },
+                "right_node": {
+                    "depth": 2,
+                    "feature": 69,
+                    "threshold": 86,
+                    "isLeafNode": false,
+                    "numOfNodes": 7,
+                    "leafReslts": {},
+                    "left_node": {
+                        "depth": 1,
+                        "feature": -1,
+                        "threshold": null,
+                        "isLeafNode": true,
+                        "numOfNodes": 4,
+                        "leafReslts": {
+                            "0": 1.0
+                        }
+                    },
+                    "right_node": {
+                        "depth": 1,
+                        "feature": -1,
+                        "threshold": null,
+                        "isLeafNode": true,
+                        "numOfNodes": 3,
+                        "leafReslts": {
+                            "270": 1.0
+                        }
+                    }
+                }
+            },
+            "right_node": {
+                "depth": 3,
+                "feature": 1,
+                "threshold": 132,
+                "isLeafNode": false,
+                "numOfNodes": 19,
+                "leafReslts": {},
+                "left_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 17,
+                    "leafReslts": {
+                        "180": 1.0
+                    }
+                },
+                "right_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 2,
+                    "leafReslts": {
+                        "270": 0.5,
+                        "90": 0.5
+                    }
+                }
+            }
+        }
+    },
+    "right_node": {
+        "depth": 5,
+        "feature": 167,
+        "threshold": 105,
+        "isLeafNode": false,
+        "numOfNodes": 32,
+        "leafReslts": {},
+        "left_node": {
+            "depth": 4,
+            "feature": 2,
+            "threshold": 44,
+            "isLeafNode": false,
+            "numOfNodes": 16,
+            "leafReslts": {},
+            "left_node": {
+                "depth": 3,
+                "feature": -1,
+                "threshold": null,
+                "isLeafNode": true,
+                "numOfNodes": 2,
+                "leafReslts": {
+                    "90": 1.0
+                }
+            },
+            "right_node": {
+                "depth": 3,
+                "feature": -1,
+                "threshold": null,
+                "isLeafNode": true,
+                "numOfNodes": 14,
+                "leafReslts": {
+                    "0": 1.0
+                }
+            }
+        },
+        "right_node": {
+            "depth": 4,
+            "feature": 95,
+            "threshold": 129,
+            "isLeafNode": false,
+            "numOfNodes": 16,
+            "leafReslts": {},
+            "left_node": {
+                "depth": 3,
+                "feature": 0,
+                "threshold": 89,
+                "isLeafNode": false,
+                "numOfNodes": 4,
+                "leafReslts": {},
+                "left_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 3,
+                    "leafReslts": {
+                        "270": 1.0
+                    }
+                },
+                "right_node": {
+                    "depth": 2,
+                    "feature": -1,
+                    "threshold": null,
+                    "isLeafNode": true,
+                    "numOfNodes": 1,
+                    "leafReslts": {
+                        "0": 1.0
+                    }
+                }
+            },
+            "right_node": {
+                "depth": 3,
+                "feature": -1,
+                "threshold": null,
+                "isLeafNode": true,
+                "numOfNodes": 12,
+                "leafReslts": {
+                    "90": 1.0
+                }
+            }
+        }
+    }
+}

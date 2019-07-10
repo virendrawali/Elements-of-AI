@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./geolocate.py", line 23, in <module>
+    predicted_city = d.classes[model.predict(x)]
+IndexError: list index out of range

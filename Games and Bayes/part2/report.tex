@@ -1,0 +1,109 @@
+\documentclass[11pt, letterpaper, fleqn]{article}
+\usepackage[super,numbers,sort&compress,square]{natbib}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+
+
+
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\setlength\parindent{0pt}
+
+\pagestyle{fancy}
+\rhead{CSCI B551 (Prof. David Crandall): Assignment 2, Part 2}
+%\rhead{\firstxmark}
+%\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\title{\textbf{Assignment 2, Part 2 for CSCI B551}}
+\author{Saurabh Mathur, Shivam Rastogi, Virendra Wali}
+\date{\today}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Naive Bayes}
+
+\subsection*{Pre-processing}
+We applied minimal pre-processing so as to preserve the original words used in the tweets. Specifically, we applied the following transformations:
+\begin{enumerate}
+\item Convert the tweet text to lowercase.
+\item Remove URLs. Most URLs occured only once.
+\item Remove special characters and unicode symbols. Most of the tweets seem to be in English. So, we removed punctuation marks like comma and full stop and only kept words which were sequences of alphabets, numbers and some symbols like (').
+
+\end{enumerate}
+
+\subsection*{Training the classifier}
+Our naive bayes classifier models two things - the distribution of locations and the distribution of words. \\
+\begin{enumerate}
+\item The prior on locations models the distribution of locations and is computed from the training data as
+
+$$ P(Location=l_i) = \frac{\#\ of\ tweets\ having\ their\ location\ as\ l_i}{total\ \#\ of\ tweets} $$
+
+\item The distribution of words associated with each location is modeled as a bayesian unigram model with a multinomial distribution and a dirichlet prior. Prediction is done using the predictive distribution method. So, the likelihood is given by
+
+$$ P(w_1, w_2, \dots, w_K|Location=l_i) = \prod_{k=1}^K \frac{m_{ik} + \alpha_{ik}}{N_i + \alpha_{i0}}$$
+Where, \\
+$m_k$ is defined as
+$$ m_{ik} = \#\ of\ times\ kth\ word\ occurs\ in\ tweets\ from\ location\ l_i$$
+
+$N_i$ is defined as
+$$ N_i = the\ total\ \#\ of\ words\ in\ tweets\ from\ location\ l_i$$
+
+and, $\alpha_i$ is the parameter of the dirichlet prior. It is a vector having one entry for each unique word in tweets for location $l_i$. $\alpha_{ik}$ is the entry of $\alpha_i$ corresponding to the kth word. $\alpha_{i0}$ is defined as
+$$ \alpha_{i0} = \sum_{a \in \alpha_i} a$$
+
+
+\end{enumerate}
+
+\subsection*{Predicting a label}
+
+For a given set of words $W=\{w_1, w_2, \dots, w_K\}$, the naive bayes prediction is given as
+$$ Prediction = \argmax_i P(l_i|W) $$
+
+where the posterior $P(l_i|W)$ is estimated as
+$$P(l_i|W) \sim \prod_{k=1}^K P(w_k|l_i)P(l_i)$$
+
+\subsection*{Implementation details}
+\begin{enumerate}
+\item For simplicity, we have set each $\alpha_{ik}$ corresponding to each word in each location as the same value (say $a$). This value was selected by selecting a value (from a set of values) that maximized the sum of evidence values of all locations. The simplified evidence function for a location $l_i$ can be given as
+$$ Evidence = \frac{\Gamma(N_ia)\prod_k \Gamma(a+m_{ki})}{\Gamma(N_ia+N_i)\prod_k\Gamma(a)}$$
+\item As the number of words in training set increases, the probability computations yield increasingly small values. This causes loss of precision. So, we used log Probabilities and log Evidence instead of the actual values. Since log is a monotonically increasing function, this transformation would not have an impact on the results.
+\end{enumerate}
+
+\subsection*{Future Work}
+\begin{enumerate}
+\item Instead of using a multinomial distribution, the distribution of words can be modeled using a bernoulli distribution. In such an implementation we would estimate the probability of each word in the vocabulary occurring and the word not occurring.
+
+\item Instead of using raw counts for each word, normalized counts such as by tf-idf(term frequency-inverse document frequency) can be used.
+
+\item Separate $\alpha$ values should be maintained for each location, since the distribution of words would vary according to the location.
+
+\item The prior on locations can be computed from outside the training data (For ex. derived from the relative twitter activity for the cities). This would have a regularizing effect on the model.
+
+
+\end{enumerate}
+\section*{References}
+\begin{enumerate}
+\item Evidence maximization in bayesian unigram modeling was taught in Prof. Khardon's Machine Learning class.
+\item Pattern Recognition and Machine Learning by Christopher M. Bishop.
+\end{enumerate}
+\end{document}
+
+
